@@ -8,6 +8,49 @@
 <body>
     <script>
         console.log("Hello, World!");
+
+        humanScore = 0;
+        computerScore = 0;
+
+        function getComputerChoice() {
+            const rock = "rock";
+            const paper = "paper";
+            const scissors = "scissors";
+            const choices = [rock, paper, scissors];
+            const randomIndex = Math.floor(Math.random() * choices.length);
+            const computerChoice = choices[randomIndex];
+            console.log("Computer choice:", computerChoice);
+            return computerChoice;
+        }
+
+        function getHumanChoice() {
+            const humanChoice = prompt("Enter rock, papaer or scissors:");
+            console.log("You chose:", humanChoice);
+            return humanChoice.toLowerCase();
+        }
+
+        function playRound(humanChoice, computerChoice) {
+            if (humanChoice === computerChoice) {
+                console.log("It's a tie!");
+            } else if (
+                (humanChoice === "rock" && computerChoice === "scissors") ||
+                (humanChoice === "paper" && computerChoice === "rock") ||
+                (humanChoice === "scissors" && computerChoice === "paper")
+            ) {
+                humanScore++;
+                console.log("You win this round!");
+            } else {
+                computerScore++;
+                console.log("Computer wins this round!");
+            }
+            console.log(`Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+        }
+
+        function playGame() {
+            playRound(getHumanChoice(), getComputerChoice());
+        }
+
+        
     </script>
 </body>
 </html>
