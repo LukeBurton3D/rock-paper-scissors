@@ -24,7 +24,7 @@
         }
 
         function getHumanChoice() {
-            const humanChoice = prompt("Enter rock, papaer or scissors:");
+            const humanChoice = prompt("Enter rock, paper or scissors:");
             console.log("You chose:", humanChoice);
             return humanChoice.toLowerCase();
         }
@@ -47,10 +47,24 @@
         }
 
         function playGame() {
-            playRound(getHumanChoice(), getComputerChoice());
+            for (let i = 0; i < 5; i++) {
+                console.log(`Round ${i + 1}`);
+                const humanChoice = getHumanChoice();
+                const computerChoice = getComputerChoice();
+                playRound(humanChoice, computerChoice);
+            };
+
+            if (humanScore > computerScore) {
+                console.log("Congratulations! You win the game!");
+            } else if (computerScore > humanScore) {
+                console.log("Computer wins the game! Better luck next time.");
+            } else {
+                console.log("The game is a tie!");
+            }
+            console.log(`Final Scores - Human: ${humanScore}, Computer: ${computerScore}`);
         }
 
-        
+        playGame();
     </script>
 </body>
 </html>
