@@ -3,68 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
+    <script src="js-file.js" defer></script>
 </head>
 <body>
-    <script>
-        console.log("Hello, World!");
-
-        humanScore = 0;
-        computerScore = 0;
-
-        function getComputerChoice() {
-            const rock = "rock";
-            const paper = "paper";
-            const scissors = "scissors";
-            const choices = [rock, paper, scissors];
-            const randomIndex = Math.floor(Math.random() * choices.length);
-            const computerChoice = choices[randomIndex];
-            console.log("Computer choice:", computerChoice);
-            return computerChoice;
-        }
-
-        function getHumanChoice() {
-            const humanChoice = prompt("Enter rock, paper or scissors:");
-            console.log("You chose:", humanChoice);
-            return humanChoice.toLowerCase();
-        }
-
-        function playRound(humanChoice, computerChoice) {
-            if (humanChoice === computerChoice) {
-                console.log("It's a tie!");
-            } else if (
-                (humanChoice === "rock" && computerChoice === "scissors") ||
-                (humanChoice === "paper" && computerChoice === "rock") ||
-                (humanChoice === "scissors" && computerChoice === "paper")
-            ) {
-                humanScore++;
-                console.log("You win this round!");
-            } else {
-                computerScore++;
-                console.log("Computer wins this round!");
-            }
-            console.log(`Scores - Human: ${humanScore}, Computer: ${computerScore}`);
-        }
-
-        function playGame() {
-            for (let i = 0; i < 5; i++) {
-                console.log(`Round ${i + 1}`);
-                const humanChoice = getHumanChoice();
-                const computerChoice = getComputerChoice();
-                playRound(humanChoice, computerChoice);
-            };
-
-            if (humanScore > computerScore) {
-                console.log("Congratulations! You win the game!");
-            } else if (computerScore > humanScore) {
-                console.log("Computer wins the game! Better luck next time.");
-            } else {
-                console.log("The game is a tie!");
-            }
-            console.log(`Final Scores - Human: ${humanScore}, Computer: ${computerScore}`);
-        }
-
-        playGame();
-    </script>
+    <div id="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <h2>Round 1</h2>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+        <div id="choices">
+            <h3>You chose: </h3>
+            <h3>The computer chose: </h3>
+        </div>
+    </div>
 </body>
 </html>
