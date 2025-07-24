@@ -1,0 +1,69 @@
+body {
+    align-items: center;
+    text-align: center;
+    background-color: #add8e6;
+}
+
+.rps-button {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin: 20px auto;
+    background-color: rgba(1, 1, 1, 0);
+    border: none;
+}
+
+button:hover {
+    filter:contrast(1.3)
+}
+
+#rock {
+    background-image: url('Rock.png');
+}
+
+#paper {
+    background-image: url('Paper.png');
+}
+
+#scissors {
+    background-image: url('Scissors.png');
+}
+
+#btns {
+    height: 300px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#reset-btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #3eb94e;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h1, h2 {
+    font-size: 40px;
+}
+
+.player-win {
+    color: green;
+}
+
+.comp-win {
+    color: red;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+}

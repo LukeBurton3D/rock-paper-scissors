@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <script src="js-file.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
         <h1>Rock, Paper, Scissors</h1>
-        <h2>Round 1</h2>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <div id="choices">
-            <h3>You chose: </h3>
-            <h3>The computer chose: </h3>
+        <h2 id="round">Round 1</h2>
+        <div id="btns">
+            <button id="rock" class="rps-button"></button>
+            <button id="paper" class="rps-button"></button>
+            <button id="scissors" class="rps-button"></button>
         </div>
     </div>
+    <div id="info">
+        <h3 id="comp-choice">Computer choice: </h3>
+        <div id="scores">
+            <h3 id="score">Your score = 0 </h3>
+            <h3 id="comp-score">Computer score = 0</h3>
+        </div>
+        <h2 id="win-text"></h2>
+    </div>
+    <button id="reset-btn">Restart</button>
+    </body>
 </body>
 </html>
