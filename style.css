@@ -31,11 +31,12 @@ button:hover {
 
 #btns {
     height: 300px;
-    padding: 1px;
+    width: 1000px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 80px;
 }
 
 #reset-btn {
